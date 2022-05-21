@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "question": "How many people in your room?",
+            "data_type":"number_of_people",
+            "required":["number"]
+        },
+        {
+            "question": "What is your favorite color?",
+            "data_type": "favourite_color",
+            "required":"choice",
+            "choices": [
+                "Red",
+                "Blue",
+                "Green",
+                "Yellow"
+            ]
+        },
+        {
+            "question": "How many cars",            
+            "data_type":"number_of_cars",
+            "required": [
+                "photo",
+                "position"
+            ]
+        }
+    ]
+}

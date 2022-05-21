@@ -1,0 +1,11 @@
+-- SQLite
+DROP TABLE users;
+
+CREATE TABLE users (
+  userid INTEGER PRIMARY KEY,
+  points INTEGER DEFAULT 0 
+);
+
+INSERT INTO users (userid) VALUES (124356768765432);
+
+SELECT * FROM users;
