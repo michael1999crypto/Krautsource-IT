@@ -1,14 +1,12 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using KrautSourceWebApi.Models;
+using System;
 
-namespace KrautSourceWebApi.Models
+namespace KrautSourceWebApi.DTOS
 {
-    public class Data
+    public class DataDto
     {
-        [Required]
         public string TypeOfData { get; set; }
 
-        [Required]
         public string Value { get; set; }
 
         public Location Position { get; set; }

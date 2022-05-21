@@ -11,6 +11,8 @@ namespace KrautSourceWebApi.Models
     {
         public async void CreateData(Data data)
         {
+            data.InsertTime = DateTime.Now;
+
             MqttFactory mqttFactory = new MqttFactory();
             IMqttClient client = mqttFactory.CreateMqttClient();
             var options = new MqttClientOptionsBuilder()
