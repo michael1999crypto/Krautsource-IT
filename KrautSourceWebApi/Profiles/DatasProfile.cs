@@ -9,6 +9,9 @@ namespace KrautSourceWebApi.Profiles
         {
             CreateMap<CreateDataDto, Data>();
             CreateMap<Data, DataDto>();
+
+            CreateMap<LocationDto, Location>();
+            CreateMap<Location, LocationDto>();
         }
     }
 }

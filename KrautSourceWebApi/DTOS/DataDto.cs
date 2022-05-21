@@ -13,7 +13,7 @@ namespace KrautSourceWebApi.DTOS
 
         public string Value { get; set; }
 
-        public Location Position { get; set; }
+        public LocationDto Position { get; set; }
 
         public DateTimeOffset InsertTime { get; set; }
     }

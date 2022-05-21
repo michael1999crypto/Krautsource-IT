@@ -17,6 +17,6 @@ namespace KrautSourceWebApi.DTOS
         [Required]
         public string Value { get; set; }
 
-        public Location Position { get; set; }
+        public LocationDto Position { get; set; }
     }
 }
