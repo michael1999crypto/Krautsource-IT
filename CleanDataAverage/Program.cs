@@ -16,7 +16,7 @@ namespace CleanDataAverage
             using(MySqlConnection conn = new MySqlConnection(tmpConnectionString))
             {
                 MySqlCommand cmd = new MySqlCommand("select * from data d join location l on (d.PositionIdLocation = l.idLocation)" +
-                    "where d.InsertTime < (now() - interval 10 minute)", conn);
+                    "where d.InsertTime > (now() - interval 10 minute)", conn);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dtData);
             }
@@ -37,9 +37,16 @@ namespace CleanDataAverage
 
                 double average = sum / ridondantDatas.Length;
 
+                SendToBrokerMQTT(row, average);
+
                 RemoveRedondantDataFromDt(ridondantDatas, dtData);
 
             }
+        }
+
+        private static void SendToBrokerMQTT(DataRow row, double average)
+        {
+            throw new NotImplementedException();
         }
 
         private static void RemoveRedondantDataFromDt(DataRow[] ridondantDatas, DataTable dtData)
