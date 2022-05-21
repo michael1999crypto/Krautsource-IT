@@ -6,6 +6,11 @@ namespace KrautSourceWebApi.Models
     public class Data
     {
         [Required]
+        public string Id { get; set; }
+
+        public string ConsumerType { get; set; }
+
+        [Required]
         public string TypeOfData { get; set; }
 
         [Required]

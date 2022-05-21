@@ -7,6 +7,11 @@ namespace KrautSourceWebApi.DTOS
     public class CreateDataDto
     {
         [Required]
+        public string Id { get; set; }
+
+        public string ConsumerType { get; set; }
+
+        [Required]
         public string TypeOfData { get; set; }
 
         [Required]
